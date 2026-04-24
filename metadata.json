@@ -1,0 +1,6 @@
+{
+  "name": "FlowMetrics Pro",
+  "description": "A command center for traffic managers to track multi-client campaign performance, monitor budgets, and streamline social media lead generation in one unified interface.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["recharts", "jspdf", "papaparse"]
+}

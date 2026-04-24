@@ -1,0 +1,9 @@
+# Ignorar dependências do Node
+node_modules/
+
+# Ignorar arquivos do Claude
+.claude/
+
+# Ignorar arquivos compactados
+*.zip
+*.rar
