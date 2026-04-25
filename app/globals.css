@@ -45,22 +45,36 @@ body {
 /* Glass utility */
 @layer utilities {
   .glass {
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(16px) saturate(140%);
-    -webkit-backdrop-filter: blur(16px) saturate(140%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
   .glass-strong {
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(24px) saturate(160%);
-    -webkit-backdrop-filter: blur(24px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.5);
   }
   .glow-violet {
-    box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.4), 0 8px 32px -8px rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.6);
+  }
+  .glow-pink {
+    box-shadow: 0 0 20px -5px rgba(236, 72, 153, 0.6);
+  }
+  .glow-emerald {
+    box-shadow: 0 0 20px -5px rgba(16, 185, 129, 0.6);
+  }
+  .glow-amber {
+    box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.6);
+  }
+  .text-glow-violet {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
   }
   .text-gradient {
-    background: linear-gradient(135deg, #c4b5fd 0%, #f0abfc 50%, #f9a8d4 100%);
+    background: linear-gradient(135deg, #fff 0%, #c4b5fd 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
