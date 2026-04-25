@@ -6,6 +6,7 @@ import { ClientCard } from "@/components/client-card";
 import { Users, DollarSign, MousePointerClick, TrendingUp } from "lucide-react";
 import { formatCurrency, formatNumber, formatPercent, dateRangePresets } from "@/lib/utils";
 import { SyncAllButton } from "./sync-all-button";
+import { DirectMetaViewer } from "./direct-meta-viewer";
 import type { Client } from "@/types/database";
 
 export const dynamic = "force-dynamic";
@@ -45,7 +46,9 @@ export default async function DashboardPage() {
         action={<SyncAllButton />}
       />
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <DirectMetaViewer />
+
+      <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <KpiCard label="Investimento" value={formatCurrency(totals.spend)} icon={DollarSign} accent="violet" />
         <KpiCard label="Leads" value={formatNumber(totals.leads)} icon={Users} accent="pink" />
         <KpiCard label="Cliques" value={formatNumber(totals.clicks)} icon={MousePointerClick} accent="emerald" />
