@@ -1,7 +1,6 @@
 import { GlassCard } from "@/components/ui/glass-card";
 import { cn } from "@/lib/utils";
 import type { LucideIcon } from "lucide-react";
-import { motion } from "framer-motion";
 
 interface KpiProps {
   label: string;
@@ -21,13 +20,8 @@ const accents = {
 export function KpiCard({ label, value, delta, icon: Icon, accent = "violet" }: KpiProps) {
   const positive = (delta ?? 0) >= 0;
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      whileHover={{ y: -4, transition: { duration: 0.2 } }}
-    >
-      <GlassCard className={cn("relative overflow-hidden p-6 transition-all duration-300", accents[accent])}>
+    <div className="h-full">
+      <GlassCard className={cn("relative h-full overflow-hidden p-6 transition-all duration-300", accents[accent])}>
         <div
           className={cn(
             "absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br blur-3xl opacity-30",
@@ -57,6 +51,6 @@ export function KpiCard({ label, value, delta, icon: Icon, accent = "violet" }: 
           </p>
         )}
       </GlassCard>
-    </motion.div>
+    </div>
   );
 }
