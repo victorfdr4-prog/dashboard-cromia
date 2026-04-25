@@ -12,7 +12,10 @@ export function LinkAdAccountForm({ clientId }: { clientId: string }) {
   function onSubmit(formData: FormData) {
     const adAccountId = String(formData.get("ad_account_id") ?? "").trim();
     const nome = String(formData.get("nome") ?? "").trim();
-    if (!adAccountId) return toast.error("Informe o ID da conta");
+    if (!adAccountId) {
+      toast.error("Informe o ID da conta");
+      return;
+    }
     start(async () => {
       const r = await linkAdAccountAction(clientId, adAccountId, nome || undefined);
       if ("error" in r && r.error) toast.error(r.error);
