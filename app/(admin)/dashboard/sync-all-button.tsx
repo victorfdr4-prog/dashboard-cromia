@@ -14,7 +14,7 @@ export function SyncAllButton() {
       onClick={() =>
         start(async () => {
           const r = await syncAllAction(30);
-          if ("error" in r && r.error) toast.error(r.error);
+          if ("error" in r && r.error) toast.error(String(r.error));
           else toast.success(`Sincronizado: ${r.synced ?? 0} linhas`);
         })
       }

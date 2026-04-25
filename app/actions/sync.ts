@@ -74,7 +74,7 @@ export async function syncAllAction(days = 30) {
   let total = 0;
   for (const c of clients) {
     const r = await syncClientAction(c.id, days);
-    if ("synced" in r) total += r.synced;
+    if ("synced" in r) total += r.synced ?? 0;
   }
   return { ok: true, synced: total };
 }
