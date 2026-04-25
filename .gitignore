@@ -1,9 +1,26 @@
-# Ignorar dependências do Node
+# Node
 node_modules/
 
-# Ignorar arquivos do Claude
+# Next.js
+.next/
+out/
+.next-build/
+
+# Env
+.env
+.env.local
+.env.production
+.env.development
+
+# Claude
 .claude/
 
-# Ignorar arquivos compactados
+# Compressed
 *.zip
 *.rar
+
+# Misc
+.DS_Store
+*.log
+dist/
+generated-reports/
